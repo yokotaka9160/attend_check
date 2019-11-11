@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>出欠管理システム</title>
+	<link rel="stylesheet" href="../static/attend_check.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<header class = "header">
+		<div class="title">
+			<h1>出欠管理システム</h1>
+			<h2>出席者にチェックを付けてください</h2>
+		</div>
+
+	</header>
+	<form action="/send" method="POST">
+		<section class="section1">
+			{% for student_name in student %}
+				<div class="checkbox">
+		  			<label><input type="checkbox" name="student_name" value="{{student_name[2]}}:{{student_name[1]}}">{{student_name[2]}}:{{student_name[1]}}</label>
+				</div>
+			{% endfor %}	
+		</section>
+		<div class="writer">
+			担当者名<br>
+			<textarea name="writer" rows="1" cols="20"></textarea>
+		</div>
+		<div class="today_word">
+			今日のひとこと<br>
+			<textarea name="freetext" rows="4" cols="100"></textarea>
+		</div>
+		<div class="row">
+			<div class="col-6 blc1">
+				<button class="check_send" type="submit" onclick="location.href='./attend_send.html'">確認</button>
+			</div>
+			<div class="col-6 blc2">
+				<button class="check_reset" type="reset">リセット</button>
+			</div>
+		</div>
+		
+	</form>
+</body>
+
+</html>

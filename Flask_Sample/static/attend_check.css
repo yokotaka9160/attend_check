@@ -1,0 +1,39 @@
+.title h1{
+	text-align: center;
+	display: block;
+	font-size: 20px;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+}
+.title h2{
+	text-align: center;
+	font-size: 10px;
+}
+
+.checkbox{
+	text-align: center;
+}
+.blc1{
+	text-align: right;
+}
+.check_send{
+	margin-right: 50px;
+	text-align: center;
+	width: 80px;
+	height: 40px;
+}
+.check_reset{
+	margin-left: 50px;
+	text-align: center;
+	width: 80px;
+	height: 40px;
+}
+.today_word{
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.writer{
+	text-align: center;
+}

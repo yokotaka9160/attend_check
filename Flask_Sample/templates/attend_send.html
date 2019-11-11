@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>出欠管理システム</title>
+	<link rel="stylesheet" href="../static/attend_send.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<form action="/send2" method="POST">
+<body>
+	<header class = "header">
+		<div class="title"><p>出欠管理システム</p>
+		</div>
+	</header>
+	<form action="/send2" method="POST">
+	  <div class="form-group">　　
+	    <label for="exampleFormControlSelect2">送信内容</label>
+	    <select multiple class="form-control " id="exampleFormControlSelect2" size="20" name="mail">
+	    	<option>日報_{{day}}</option>
+	    	<option>本文</option>
+	    	<option>西山先生，秦野先生，及び西山研究室研究生の皆さんへ</option>
+			<option>西山研究室B4の{{writer_name}}です．</option>
+			<option>本日の日報です</option>
+			<option>[出席者]</option>
+			
+	    	{% for stu_name in student %}
+	      	<option>{{stu_name}}</option>
+	    	{% endfor %}
+
+	       <option>[本日のひとこと]</option>
+	       <option>{{text}}</option>
+	       <option>---------------------------------------</option>
+		   <option>東京理科大学　理工学部　経営工学科</option>
+		   <option>名前：{{writer_name}}</option>
+		   <option>Email：{{student_number}}@ed.tus.ac.jp</option>
+		   <option>---------------------------------------</option>
+	    </select>
+	  </div>
+	<div class="row">
+		<div class="col-6 blc1">
+			<button class="check_send" type="submit" onclick="location.href='./thanks.html'">送る</button>
+		</div>
+		<div class="col-6 blc2">
+			<button class="check_back" type=button onclick="location.href='./attend_check.html'">戻る</button>
+		</div>
+	</div>
+	</form>
+</body>
+</form>
+</html>

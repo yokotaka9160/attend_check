@@ -1,0 +1,26 @@
+.title{
+	text-align: center;
+	display: block;
+	font-size: 18px;
+	font-weight: bold;
+	margin-left: auto;
+	margin-right: auto;
+}
+.checkbox{
+	text-align: center;
+}
+.blc1{
+	text-align: right;
+}
+.check_send{
+	margin-right: 50px;
+	text-align: center;
+	width: 80px;
+	height: 40px;
+}
+.check_back{
+	margin-left: 50px;
+	text-align: center;
+	width: 80px;
+	height: 40px;
+}
